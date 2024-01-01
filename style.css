@@ -18,23 +18,35 @@ font-face {
 *{
 font-family: 'Noto Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
-transition: all .55s ease;
 margin: 0;
 padding: 0;
-color: white;
-
 }
 body{
 background-color: #0F0D0D;
 }
-.nav{
-height: 10vh;
+nav{
+height: 20vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
 }
-.page1{
-height: 50vh;
-background-color: #0F0D0D;
+nav a{
+text-decoration: none;
+color: #fff;
+transition: all .55s ease;
 }
 
+nav img{
+width: 5vh;
+height: 20vh;
+object-fit: cover;
+}
+.page1{ 
+height: 70vh;
+width: 100%;
+}
 .page1 video{
 width: 40vh;
 height: auto;
@@ -45,67 +57,62 @@ position: relative;
 left: 50%;
 transform: translate(-50%,0);
 }
-.page1 h1{
-padding: 0 40px;
-color: white;
-font-family: neu;
+.page1 h2{
+text-transform: uppercase;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 99;
+color: white; 
+font-weight: 150;
 font-size: 6vh;
 }
-.page1 h2{
-justify-content: center;
-align-items: center;
+.page1 h3{
+text-transform: uppercase;
 display: flex;
-padding: 0 40px;
-font-family: neu;
-font-size: 5vh;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 99;
+color: white; 
+font-weight: 150;
+font-size: 6vh;
+padding: 2vh 0;
 }
+.page1-content h1{
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+text-transform: uppercase;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 99;
+color: white;
+font-weight: 100;
+margin-top: -23vh;
+}
+
 .page2{
-height: 55vh;
+height: 100vh;
+width: 100%;
+background-color: blue;
 }
-.page2 h2{
-font-weight: 200;
-padding: 20px 0;
-opacity: 0;
-border-bottom: 2px solid;
-}
-.page2 h1{
-font-weight: 200;
-padding: 20px 0;
-border-bottom: 2px solid;
-margin-left: -25vh;
-opacity: 0;
-}
-.page3{
-height: 80vh;
-opacity: 0;
+.circle{
+height: 40vh;
+width: 40vh;
+background-color: red;
+border-radius: 50%;
+filter: blur(20px);
+animation:movement 8s linear infinite alternate;
 }
 
-
-
-
-
- .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
-    }
+@keyframes movement {
+ 
+from{
+transform: translate(10%,0);
+}
+to{
+transform: translate(-5%,5%);
+}
